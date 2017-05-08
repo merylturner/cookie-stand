@@ -1,4 +1,5 @@
 'use strict';
+var times = ['6 AM', '7 AM', '8 AM', '9 AM', '10 AM', '11 AM', '12 PM', '1 PM', '2 PM', '3 PM', '4 PM', '5 PM', '6 PM', '7 PM', '8 PM'];
 var store1 = {
     name: 'PDX Airport',
     minHourlyCustomer: 23,
@@ -9,7 +10,7 @@ var store1 = {
         return Math.floor(Math.random() * (this.maxHourlyCustomer - this.minHourlyCustomer) + this.minHourlyCustomer);
     },
     makeFakeData: function () {
-        this.hourlyCookies = [ ];
+        this.hourlyCookies = [];
         for (var i = 0; i < 14; i++) {
             var randCookies = Math.round(this.numCustomers() * this.avgCookiesPerCustomer);
             this.hourlyCookies.push(randCookies);
@@ -22,12 +23,12 @@ var store2 = {
     minHourlyCustomer: 3,
     maxHourlyCustomer: 24,
     avgCookiesPerCustomer: 1.2,
-    id: 'store2',    
+    id: 'store2',
     numCustomers: function () {
         return Math.floor(Math.random() * (this.maxHourlyCustomer - this.minHourlyCustomer) + this.minHourlyCustomer);
     },
     makeFakeData: function () {
-        this.hourlyCookies = [ ];
+        this.hourlyCookies = [];
         for (var i = 0; i < 14; i++) {
             var randCookies = Math.round(this.numCustomers() * this.avgCookiesPerCustomer);
             this.hourlyCookies.push(randCookies);
@@ -46,7 +47,7 @@ var store3 = {
         return Math.floor(Math.random() * (this.maxHourlyCustomer - this.minHourlyCustomer) + this.minHourlyCustomer);
     },
     makeFakeData: function () {
-        this.hourlyCookies = [ ];
+        this.hourlyCookies = [];
         for (var i = 0; i < 14; i++) {
             var randCookies = Math.round(this.numCustomers() * this.avgCookiesPerCustomer);
             this.hourlyCookies.push(randCookies);
@@ -60,12 +61,12 @@ var store4 = {
     maxHourlyCustomer: 38,
     avgCookiesPerCustomer: 2.3,
     id: 'store4',
-    
+
     numCustomers: function () {
         return Math.floor(Math.random() * (this.maxHourlyCustomer - this.minHourlyCustomer) + this.minHourlyCustomer);
     },
     makeFakeData: function () {
-        this.hourlyCookies = [ ];
+        this.hourlyCookies = [];
         for (var i = 0; i < 14; i++) {
             var randCookies = Math.round(this.numCustomers() * this.avgCookiesPerCustomer);
             this.hourlyCookies.push(randCookies);
@@ -79,12 +80,12 @@ var store5 = {
     maxHourlyCustomer: 16,
     avgCookiesPerCustomer: 4.6,
     id: 'store5',
-    
+
     numCustomers: function () {
         return Math.floor(Math.random() * (this.maxHourlyCustomer - this.minHourlyCustomer) + this.minHourlyCustomer);
     },
     makeFakeData: function () {
-        this.hourlyCookies = [ ];
+        this.hourlyCookies = [];
         for (var i = 0; i < 14; i++) {
             var randCookies = Math.round(this.numCustomers() * this.avgCookiesPerCustomer);
             this.hourlyCookies.push(randCookies);
@@ -95,10 +96,21 @@ var store5 = {
 // console.log(store5.hourlyCookies);
 
 var allStores = [store1, store2, store3, store4, store5];
-for(var i = 0; i <allStores.length; i++){
+for (var i = 0; i < allStores.length; i++) {
     var store = allStores[i];
     var section = document.getElementById(store.id);
     var header = document.createElement('h3');
     header.innerText = store.name;
     section.appendChild(header);
-}
+
+    store.makeFakeData();
+
+    var ul = document.createElement('ul');
+
+    for (var j = 0; j < store.hourlyCookies.length; j++) {
+        var li = document.createElement('li');
+        li.innerText = store.hourlyCookies[j];
+        ul.appendChild(li);
+    }
+    section.appendChild(ul);
+};

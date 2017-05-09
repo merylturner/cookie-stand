@@ -1,3 +1,33 @@
+h1, h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    color: #ff5240;
+}
+
+* {
+    font-family: Arial, sans-serif;
+}
+
+.location h3 {
+    font-szie: 50px;
+}
+
+.location ul p {
+    font-family: inherit;
+    font-size: 12px;
+    text-indent: 10px;
+}
+
+.location {
+    display: inline-block;
+}
+
+p {
+    font-size: 12px;
+    text-align: center;
+}
+
 #datatable {
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;

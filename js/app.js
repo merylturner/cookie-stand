@@ -1,6 +1,5 @@
 'use strict';
-// var times = ['6 AM', '7 AM', '8 AM', '9 AM', '10 AM', '11 AM', '12 PM', '1 PM', '2 PM', '3 PM', '4 PM', '5 PM', '6 PM', '7 PM', '8 PM'];
-
+var times = ['Location','6 AM', '7 AM', '8 AM', '9 AM', '10 AM', '11 AM', '12 PM', '1 PM', '2 PM', '3 PM', '4 PM', '5 PM', '6 PM', '7 PM', '8 PM'];
 
 //create constructor function holding parameters for each store object 
 function Store(name, minHourlyCustomer, maxHourlyCustomer, avgCookiesPerCustomer, id) {
@@ -23,39 +22,51 @@ function Store(name, minHourlyCustomer, maxHourlyCustomer, avgCookiesPerCustomer
         }
         // console.log(this.hourlyCookies);
         //create total number of cookies per day
-        this.numCookies = function () {
-            var totalCookies = 0;
-            for (var i = 0; i < this.hourlyCookies.length; i++) {
-                totalCookies += this.hourlyCookies[i];
-            }
-            return totalCookies;
+    this.numCookies = function () {
+        var totalCookies = 0;
+        for (var i = 0; i < this.hourlyCookies.length; i++) {
+            totalCookies += this.hourlyCookies[i];
+        }
+        return totalCookies;
         }
         // console.log(this.totalCookies);
     }
 }
 //create instances of each store below using constructor function above
 
-    var pdx = new Store('PDX Airport', 23, 65, 6.3, 'store1');
-    var pioneer = new Store('Pioneer Square', 3, 24, 1.2, 'store2');
-    var powells = new Store('Powell\'s', 11, 38, 3.7, 'store3');
-    var stJohns = new Store('St. John\'s', 20, 38, 3.2, 'store4');
-    var waterfront = new Store('Waterfront', 2, 16, 4.6, 'store5');
+var pdx = new Store('PDX Airport', 23, 65, 6.3, 'store1');
+var pioneer = new Store('Pioneer Square', 3, 24, 1.2, 'store2');
+var powells = new Store('Powell\'s', 11, 38, 3.7, 'store3');
+var stJohns = new Store('St. John\'s', 20, 38, 3.2, 'store4');
+var waterfront = new Store('Waterfront', 2, 16, 4.6, 'store5');
 
 //create array of all store objects and their data
-var allStores = [pdx, pioneer, powells, stJohns, waterfront ];
+var allStores = [pdx, pioneer, powells, stJohns, waterfront];
 
 //create variable for table
 var table = document.getElementById('datatable');
 
-//render function
-function render (cellType, content, row) {
+//render function to create cells
+function render(cellType, content, row) {
     var cell = document.createElement(cellType);
     cellType.innerText = content;
     row.appendChild(cell);
 }
+
+//render function to create header cells
+function renderHeader() {
+    var tableHeader = document.createElement('thead');
+
+    for (var i = 0; i < times.length; i++) {
+        var header = document.createElement('th');
+        header.innerText = times[i];
+        tableHeader.appendChild(header);
+    }
+    table.appendChild(tableHeader);
+}
 //create render function to create cells for each store
 Store.prototype.render = function () {
-    this.makeFakeData ();
+    this.makeFakeData();
     var row = document.createElement('tr');
     var cellName = document.createElement('td');
     cellName.innerText = this.name;
@@ -65,12 +76,23 @@ Store.prototype.render = function () {
         var cell = document.createElement('td');
         cell.innerText = this.hourlyCookies[i];
         row.appendChild(cell);
-    
     }
     table.appendChild(row);
+    
+    var lastCell = document.createElement('td');
+    lastCell.innerText = this.numCookies();
+    row.appendChild(lastCell);
+
 }
 
 pdx.render();
+pioneer.render();
+powells.render();
+stJohns.render();
+waterfront.render();
+
+renderHeader();
+
 
     // for (var i = 0; i < allStores.length; i++) {
     //     var store = allStores[i];

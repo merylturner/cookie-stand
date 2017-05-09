@@ -1,6 +1,7 @@
 h1 {
-    font-family: Arial, sans-serif;
-    font-size: 80px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 50px;
+    text-align: center;
     color: #ff5240;
 }
 
@@ -18,4 +19,9 @@ h1 {
 }
 .location {
     display: inline-block;
+}
+p {
+    font-size: 12px;
+    text-align: center;
+
 }

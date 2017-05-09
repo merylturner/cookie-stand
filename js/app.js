@@ -2,15 +2,18 @@
 var times = ['6 AM', '7 AM', '8 AM', '9 AM', '10 AM', '11 AM', '12 PM', '1 PM', '2 PM', '3 PM', '4 PM', '5 PM', '6 PM', '7 PM', '8 PM'];
 // var totalCookies = [];
 
+//store 1 object 
 var store1 = {
     name: 'PDX Airport',
     minHourlyCustomer: 23,
     maxHourlyCustomer: 65,
     avgCookiesPerCustomer: 6.3,
     id: 'store1',
+    //numCustomers calculate random # of customers per hour
     numCustomers: function () {
         return Math.floor(Math.random() * (this.maxHourlyCustomer - this.minHourlyCustomer) + this.minHourlyCustomer);
     },
+    //makeFakedata creates data for cookies per hour per customer, and adds to the hourlyCookies array each time 
     makeFakeData: function () {
         this.hourlyCookies = [];
         for (var i = 0; i < 15; i++) {
@@ -18,6 +21,7 @@ var store1 = {
             this.hourlyCookies.push(randCookies);
         }
     },
+    //numCookies creates array for totalCookies and adds each item in hourlyCookies array to create sum of all cookies
     numCookies: function () {
         var totalCookies = 0;
         for (var i = 0; i < this.hourlyCookies.length; i++) {
@@ -27,6 +31,7 @@ var store1 = {
     }
 };
 
+//store 2 object
 var store2 = {
     name: 'Pioneer Square',
     minHourlyCustomer: 3,
@@ -52,6 +57,7 @@ var store2 = {
     }
 };
 
+//store 3 object
 var store3 = {
     name: 'Powell\'s',
     minHourlyCustomer: 11,
@@ -78,6 +84,7 @@ var store3 = {
     }
 };
 
+//store 4 object
 var store4 = {
     name: 'St. Johns',
     minHourlyCustomer: 20,
@@ -104,6 +111,7 @@ var store4 = {
     }
 };
 
+//store 5 object
 var store5 = {
     name: 'Waterfront',
     minHourlyCustomer: 2,

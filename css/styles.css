@@ -28,31 +28,3 @@ p {
     text-align: center;
 }
 
-#datatable {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
-    display: block;
-    overflow: auto;
-    /*table-layout: fixed;
-    width: 500px;*/
-}
-tr {
-    background-color: lightgrey;
-}
-td {
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 12px;
-    width: 100px;
-    height: 30px;
-    color:black;
-    word-wrap: break-word;
-}
-th {
-    word-wrap: break-word;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    font-style: bold;
-    background-color: lightblue;
-
-}

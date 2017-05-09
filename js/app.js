@@ -1,5 +1,5 @@
 'use strict';
-var times = ['Location','6 AM', '7 AM', '8 AM', '9 AM', '10 AM', '11 AM', '12 PM', '1 PM', '2 PM', '3 PM', '4 PM', '5 PM', '6 PM', '7 PM', '8 PM'];
+var tableHeaderData = ['Location', '6 am', '7 am', '8 am', '9 am', '10 am', '11 am', '12 pm', '1 pm', '2 pm', '3 pm', '4 pm', '5 pm', '6 pm', '7 pm', '8 pm', 'Daily Location Total'];
 
 //create constructor function holding parameters for each store object 
 function Store(name, minHourlyCustomer, maxHourlyCustomer, avgCookiesPerCustomer, id) {
@@ -22,12 +22,12 @@ function Store(name, minHourlyCustomer, maxHourlyCustomer, avgCookiesPerCustomer
         }
         // console.log(this.hourlyCookies);
         //create total number of cookies per day
-    this.numCookies = function () {
-        var totalCookies = 0;
-        for (var i = 0; i < this.hourlyCookies.length; i++) {
-            totalCookies += this.hourlyCookies[i];
-        }
-        return totalCookies;
+        this.numCookies = function () {
+            var totalCookies = 0;
+            for (var i = 0; i < this.hourlyCookies.length; i++) {
+                totalCookies += this.hourlyCookies[i];
+            }
+            return totalCookies;
         }
         // console.log(this.totalCookies);
     }
@@ -53,17 +53,18 @@ function render(cellType, content, row) {
     row.appendChild(cell);
 }
 
-//render function to create header cells
+//render function to create and fill header cells
 function renderHeader() {
     var tableHeader = document.createElement('thead');
 
-    for (var i = 0; i < times.length; i++) {
+    for (var i = 0; i < tableHeaderData.length; i++) {
         var header = document.createElement('th');
-        header.innerText = times[i];
+        header.innerText = tableHeaderData[i];
         tableHeader.appendChild(header);
     }
     table.appendChild(tableHeader);
 }
+
 //create render function to create cells for each store
 Store.prototype.render = function () {
     this.makeFakeData();
@@ -78,42 +79,20 @@ Store.prototype.render = function () {
         row.appendChild(cell);
     }
     table.appendChild(row);
-    
+
     var lastCell = document.createElement('td');
     lastCell.innerText = this.numCookies();
     row.appendChild(lastCell);
 
 }
-
+//call render function for each store to display data
 pdx.render();
 pioneer.render();
 powells.render();
 stJohns.render();
 waterfront.render();
 
+//call header function to display header information
 renderHeader();
-
-
-    // for (var i = 0; i < allStores.length; i++) {
-    //     var store = allStores[i];
-    //     var section = document.getElementById(store.id);
-    //     var header = document.createElement('h3');
-    //     header.innerText = store.name;
-    //     section.appendChild(header);
-
-    //     store.makeFakeData();
-
-    //     var ul = document.createElement('ul');
-
-    //     for (var j = 0; j < store.hourlyCookies.length; j++) {
-    //         var li = document.createElement('li');
-    //         li.innerText = times[j] + ': ' + store.hourlyCookies[j] + ' cookies';
-
-    //         ul.appendChild(li);
-    //     }
-
-    //     li.innerText = 'Total: ' + store.numCookies() + ' cookies';
-    //     section.appendChild(ul);
-    // }
 
 

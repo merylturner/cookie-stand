@@ -33,151 +33,44 @@ function Store(name, minHourlyCustomer, maxHourlyCustomer, avgCookiesPerCustomer
         // console.log(this.totalCookies);
     }
 }
-    var PDX = new Store('PDX Airport', 23, 65, 6.3, 'store1');
-    var Pioneer = new Store('Pioneer Square', 3, 24, 1.2, 'store2');
-    var Powells = new Store('Powell\'s', 11, 38, 3.7, 'store3');
-    var StJohns = new Store('St. John\'s', 20, 38, 3.2, 'store4');
-    var Waterfront = new Store('Waterfront', 2, 16, 4.6, 'store5');
+//create instances of each store below using constructor function above
 
+    var pdx = new Store('PDX Airport', 23, 65, 6.3, 'store1');
+    var pioneer = new Store('Pioneer Square', 3, 24, 1.2, 'store2');
+    var powells = new Store('Powell\'s', 11, 38, 3.7, 'store3');
+    var stJohns = new Store('St. John\'s', 20, 38, 3.2, 'store4');
+    var waterfront = new Store('Waterfront', 2, 16, 4.6, 'store5');
 
-    //store 1 object
-    // var store1 = {
-    //     name: 'PDX Airport',
-    //     minHourlyCustomer: 23,
-    //     maxHourlyCustomer: 65,
-    //     avgCookiesPerCustomer: 6.3,
-    //     id: 'store1',
-    //     //numCustomers calculate random # of customers per hour
-    //     numCustomers: function () {
-    //         return Math.floor(Math.random() * (this.maxHourlyCustomer - this.minHourlyCustomer) + this.minHourlyCustomer);
-    //     },
-    //     //makeFakedata creates data for cookies per hour per customer, and adds to the hourlyCookies array each time 
-    //     makeFakeData: function () {
-    //         this.hourlyCookies = [];
-    //         for (var i = 0; i < 15; i++) {
-    //             var randCookies = Math.round(this.numCustomers() * this.avgCookiesPerCustomer);
-    //             this.hourlyCookies.push(randCookies);
-    //         }
-    //     },
-    //     //numCookies creates array for totalCookies and adds each item in hourlyCookies array to create sum of all cookies
-    //     numCookies: function () {
-    //         var totalCookies = 0;
-    //         for (var i = 0; i < this.hourlyCookies.length; i++) {
-    //             totalCookies += this.hourlyCookies[i];
-    //         }
-    //         return totalCookies;
-    //     }
-    // };
+//create array of all store objects and their data
+var allStores = [pdx, pioneer, powells, stJohns, waterfront ];
 
-    // //store 2 object
-    // var store2 = {
-    //     name: 'Pioneer Square',
-    //     minHourlyCustomer: 3,
-    //     maxHourlyCustomer: 24,
-    //     avgCookiesPerCustomer: 1.2,
-    //     id: 'store2',
-    //     numCustomers: function () {
-    //         return Math.floor(Math.random() * (this.maxHourlyCustomer - this.minHourlyCustomer) + this.minHourlyCustomer);
-    //     },
-    //     makeFakeData: function () {
-    //         this.hourlyCookies = [];
-    //         for (var i = 0; i < 15; i++) {
-    //             var randCookies = Math.round(this.numCustomers() * this.avgCookiesPerCustomer);
-    //             this.hourlyCookies.push(randCookies);
-    //         }
-    //     },
-    //     numCookies: function () {
-    //         var totalCookies = 0;
-    //         for (var i = 0; i < this.hourlyCookies.length; i++) {
-    //             totalCookies += this.hourlyCookies[i];
-    //         }
-    //         return totalCookies;
-    //     }
-    // };
+//create variable for table
+var table = document.getElementById('datatable');
 
-    // //store 3 object
-    // var store3 = {
-    //     name: 'Powell\'s',
-    //     minHourlyCustomer: 11,
-    //     maxHourlyCustomer: 38,
-    //     avgCookiesPerCustomer: 3.7,
-    //     id: 'store3',
+//render function
+function render (cellType, content, row) {
+    var cell = document.createElement(cellType);
+    cellType.innerText = content;
+    row.appendChild(cell);
+}
+//create render function to create cells for each store
+Store.prototype.render = function () {
+    this.makeFakeData ();
+    var row = document.createElement('tr');
+    var cellName = document.createElement('td');
+    cellName.innerText = this.name;
+    row.appendChild(cellName);
 
-    //     numCustomers: function () {
-    //         return Math.floor(Math.random() * (this.maxHourlyCustomer - this.minHourlyCustomer) + this.minHourlyCustomer);
-    //     },
-    //     makeFakeData: function () {
-    //         this.hourlyCookies = [];
-    //         for (var i = 0; i < 15; i++) {
-    //             var randCookies = Math.round(this.numCustomers() * this.avgCookiesPerCustomer);
-    //             this.hourlyCookies.push(randCookies);
-    //         }
-    //     },
-    //     numCookies: function () {
-    //         var totalCookies = 0;
-    //         for (var i = 0; i < this.hourlyCookies.length; i++) {
-    //             totalCookies += this.hourlyCookies[i];
-    //         }
-    //         return totalCookies;
-    //     }
-    // };
+    for (var i = 0; i < this.hourlyCookies.length; i++) {
+        var cell = document.createElement('td');
+        cell.innerText = this.hourlyCookies[i];
+        row.appendChild(cell);
+    
+    }
+    table.appendChild(row);
+}
 
-    // //store 4 object
-    // var store4 = {
-    //     name: 'St. Johns',
-    //     minHourlyCustomer: 20,
-    //     maxHourlyCustomer: 38,
-    //     avgCookiesPerCustomer: 2.3,
-    //     id: 'store4',
-
-    //     numCustomers: function () {
-    //         return Math.floor(Math.random() * (this.maxHourlyCustomer - this.minHourlyCustomer) + this.minHourlyCustomer);
-    //     },
-    //     makeFakeData: function () {
-    //         this.hourlyCookies = [];
-    //         for (var i = 0; i < 15; i++) {
-    //             var randCookies = Math.round(this.numCustomers() * this.avgCookiesPerCustomer);
-    //             this.hourlyCookies.push(randCookies);
-    //         }
-    //     },
-    //     numCookies: function () {
-    //         var totalCookies = 0;
-    //         for (var i = 0; i < this.hourlyCookies.length; i++) {
-    //             totalCookies += this.hourlyCookies[i];
-    //         }
-    //         return totalCookies;
-    //     }
-    // };
-
-    // //store 5 object
-    // var store5 = {
-    //     name: 'Waterfront',
-    //     minHourlyCustomer: 2,
-    //     maxHourlyCustomer: 16,
-    //     avgCookiesPerCustomer: 4.6,
-    //     id: 'store5',
-    //     // hourlyCookies: [],
-    //     numCustomers: function () {
-    //         return Math.floor(Math.random() * (this.maxHourlyCustomer - this.minHourlyCustomer) + this.minHourlyCustomer);
-    //     },
-    //     makeFakeData: function () {
-    //         this.hourlyCookies = [];
-    //         for (var i = 0; i < 15; i++) {
-    //             var randCookies = Math.round(this.numCustomers() * this.avgCookiesPerCustomer);
-    //             this.hourlyCookies.push(randCookies);
-    //         }
-    //     },
-    //     numCookies: function () {
-    //         var totalCookies = 0;
-    //         for (var i = 0; i < this.hourlyCookies.length; i++) {
-    //             totalCookies += this.hourlyCookies[i];
-    //         }
-    //         return totalCookies;
-    //     }
-    // };
-
-
-    // var allStores = [store1, store2, store3, store4, store5];
+pdx.render();
 
     // for (var i = 0; i < allStores.length; i++) {
     //     var store = allStores[i];

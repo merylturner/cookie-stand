@@ -2,21 +2,25 @@
 var tableHeaderData = ['Location', '6 am', '7 am', '8 am', '9 am', '10 am', '11 am', '12 pm', '1 pm', '2 pm', '3 pm', '4 pm', '5 pm', '6 pm', '7 pm', '8 pm', 'Daily Location Total'];
 
 //create constructor function holding parameters for each store object 
-function Store(name, minHourlyCustomer, maxHourlyCustomer, avgCookiesPerCustomer, id) {
+function Store(name, minHourlyCustomer, maxHourlyCustomer, avgCookiesPerCustomer) {
     this.name = name;
     this.minHourlyCustomer = minHourlyCustomer;
     this.maxHourlyCustomer = maxHourlyCustomer;
     this.avgCookiesPerCustomer = avgCookiesPerCustomer;
-    this.id = id;
+    // this.id = id;
     // generate random number customers per hour
     this.numCustomers = function () {
-        return Math.floor(Math.random() * (this.maxHourlyCustomer - this.minHourlyCustomer) + this.minHourlyCustomer);
+        // console.log()
+        return Math.floor((Math.random() * (this.maxHourlyCustomer - this.minHourlyCustomer)) + this.minHourlyCustomer);
+        
     }
     // console.log(this.numCustomers);
     //create total number of cookies per hour
     this.makeFakeData = function () {
         this.hourlyCookies = [];
+        console.log(typeof(this.minHourlyCustomer), this.maxHourlyCustomer, this.avgCookiesPerCustomer);
         for (var i = 0; i < 15; i++) {
+            console.log(this.numCustomers());
             var randCookies = Math.round(this.numCustomers() * this.avgCookiesPerCustomer);
             this.hourlyCookies.push(randCookies);
         }
@@ -34,11 +38,11 @@ function Store(name, minHourlyCustomer, maxHourlyCustomer, avgCookiesPerCustomer
 }
 //create instances of each store below using constructor function above
 
-var pdx = new Store('PDX Airport', 23, 65, 6.3, 'store1');
-var pioneer = new Store('Pioneer Square', 3, 24, 1.2, 'store2');
-var powells = new Store('Powell\'s', 11, 38, 3.7, 'store3');
-var stJohns = new Store('St. John\'s', 20, 38, 3.2, 'store4');
-var waterfront = new Store('Waterfront', 2, 16, 4.6, 'store5');
+var pdx = new Store('PDX Airport', 23, 65, 6.3);
+var pioneer = new Store('Pioneer Square', 3, 24, 1.2);
+var powells = new Store('Powell\'s', 11, 38, 3.7);
+var stJohns = new Store('St. John\'s', 20, 38, 3.2);
+var waterfront = new Store('Waterfront', 2, 16, 4.6);
 
 //create array of all store objects and their data
 var allStores = [pdx, pioneer, powells, stJohns, waterfront];
@@ -95,28 +99,33 @@ waterfront.render();
 //call header function to display header information
 renderHeader();
 
+// var form = document.getElementById('a')
 var newStore = document.getElementById('addStore');
 newStore.addEventListener('submit', addNewStore);
 
-function addNewStore() {
-    // event.preventDefault();
+function addNewStore(event) {
+    event.preventDefault();
 
     var form = event.target;
     var name = form.name.value;
-    var min = form.minHourlyCustomer.value;
-    var max = form.maxHourlyCustomer.value;
-    var avg = form.avgCookiesPerCustomer.value;
-    var id = form.id.value;
+    var min = parseInt(form.min.value);
+    var max = parseInt(form.max.value);
+    var avg = parseInt(form.avg.value);
+    // var id = form.id.value;
+    console.log(typeof(min));
+    console.log(max);
+    console.log(avg);
 
-    var newSt = new Store(name, min, max, avg, id);
+
+    var newSt = new Store(name, min, max, avg);
     console.log(newSt);
 
-    var newStoreEle = document.getElementById('tr');
-    newStoreEle.id('addStore');
-    newStoreEle.innerText = name;
-    form.appendChild(newStoreEle);
-    console.log(newStoreEle);
-
+    // var newStoreEle = document.createElement('tr');
+    // newStoreEle.id = addStore;
+    // newStoreEle.innerText = name;
+    // newStore.appendChild(newStoreEle);
+    // console.log(newStoreEle);
+    newSt.render();
 }
 
 

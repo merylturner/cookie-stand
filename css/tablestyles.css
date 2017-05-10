@@ -28,6 +28,12 @@ p {
     text-align: center;
 }
 
+#container {
+    margin-bottom: 80px;
+}
+#addStore {
+    display: block;
+}
 #datatable {
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;

@@ -61,41 +61,66 @@ th {
     color:white;
 
 }
+
 #form {
     border: none;
-    display: block;
-    padding: 10px;
-    width: 700px;
-    margin: auto;
-    border: none;
 }
+
 #input{
     display:block;
     /*margin: 10px;*/
     /*padding: 10px;*/
-}
-#legend {
-    color: darkslategrey;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 24px;
-    border: none;
-    text-align: center;
 }
 #addStore {
     display: block;
     font-size: 16px;
     font-family:'Open Sans', sans-serif;
 }
+#legend {
+    color: darkslategrey;
+    width: 500px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    border: none;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    padding: 10px;
+}
 #button{
-    background-color: darkslategray;
+    background-color: #ff5240;
     padding: 4px 10px 4px 10px;
     font-size: 12px;
     font-family:'Open Sans', sans-serif;
     color: white;
     border: none;
     border-radius: 5px;
+    margin-top: 30px;
+    text-align: left;
 }
 
 .input1, .input2, .input3, .input4 {
-    display: inline;
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight:bold;
+    padding: 5px;
+    color: darkslategray;
+}
+.input1 input, .input2 input, .input3 input, .input4 input {
+    /*background-color:#d2d9dd;*/
+    border: none;
+    height: 20px;
+    font-size: 16px;
+    width: 400px;
+    padding: 5px;
+}
+
+#inputForm {
+    background-color:lightgrey;
+    border-radius: 8px;
+    max-width: 450px;
+    /*margin-left: 500px;
+    margin-right: 500px;*/
+    
 }

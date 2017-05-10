@@ -95,4 +95,29 @@ waterfront.render();
 //call header function to display header information
 renderHeader();
 
+var newStore = document.getElementById('addStore');
+newStore.addEventListener('submit', addNewStore);
+
+function addNewStore() {
+    // event.preventDefault();
+
+    var form = event.target;
+    var name = form.name.value;
+    var min = form.minHourlyCustomer.value;
+    var max = form.maxHourlyCustomer.value;
+    var avg = form.avgCookiesPerCustomer.value;
+    var id = form.id.value;
+
+    var newSt = new Store(name, min, max, avg, id);
+    console.log(newSt);
+
+    var newStoreEle = document.getElementById('tr');
+    newStoreEle.id('addStore');
+    newStoreEle.innerText = name;
+    form.appendChild(newStoreEle);
+    console.log(newStoreEle);
+
+}
+
+
 

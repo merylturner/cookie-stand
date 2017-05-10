@@ -33,50 +33,51 @@ img {
     margin: auto;
     width: 500px;
 }
-table {
+.table {
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
     display: block;
     overflow: auto;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 200px;
+    margin-right: 200px;
     /*width: 800px;*/
 }
 
 td {
     width: 200px;
+    margin: 50px;
 }
 #img {
     background-color: white;
+    width: 200px;
+    height: 200px;
 }
 #data1 {
     text-align: center;
     font-family: 'Open Sans', sans-serif;
     font-size: 24px;
-    height: 100px;
+    height: 60px;
     color:black;
     word-wrap: break-word;
-    background-color: salmon;
+    background-color: #ff5240;
     color: white;
 }
 #data2 {
     font-size: 16px;
-    background-color: lightgrey;
     color: darkslategrey;
-    height: 80px;
+    height: 50px;
 }
 #data3 {
     font-size: 12px;
-    background-color: lightgrey;
     color: darkslategrey;
-    height: 80px;
+    height: 50px;
 }
 h2 {
-    text-align: left;
+    text-align: center;
     font-family: 'Open Sans', sans-serif;
     font-size: 24px;
-    color: salmon;
+    color: darkslategrey;
 }
 th {
     word-wrap: break-word;

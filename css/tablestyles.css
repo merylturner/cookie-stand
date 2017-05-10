@@ -45,7 +45,7 @@ td {
     font-size: 12px;
     width: 100px;
     height: 30px;
-    color:black;
+    color:darkslategrey;
     word-wrap: break-word;
 }
 th {
@@ -53,6 +53,7 @@ th {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     font-style: bold;
-    background-color: salmon;
+    background-color: darkslategrey;
+    color:white;
 
 }

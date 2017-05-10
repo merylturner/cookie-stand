@@ -12,32 +12,29 @@ function Store(name, minHourlyCustomer, maxHourlyCustomer, avgCookiesPerCustomer
     this.numCustomers = function () {
         // console.log()
         return Math.floor((Math.random() * (this.maxHourlyCustomer - this.minHourlyCustomer)) + this.minHourlyCustomer);
-        
-    }
-    // console.log(this.numCustomers);
+
+};
+//create total number of cookies per hour and calculate total
+this.makeFakeData = function () {
     //create total number of cookies per hour
-    this.makeFakeData = function () {
-        this.hourlyCookies = [];
-        console.log(typeof(this.minHourlyCustomer), this.maxHourlyCustomer, this.avgCookiesPerCustomer);
-        for (var i = 0; i < 15; i++) {
-            console.log(this.numCustomers());
-            var randCookies = Math.round(this.numCustomers() * this.avgCookiesPerCustomer);
-            this.hourlyCookies.push(randCookies);
-        }
-        // console.log(this.hourlyCookies);
-        //create total number of cookies per day
-        this.numCookies = function () {
-            var totalCookies = 0;
-            for (var i = 0; i < this.hourlyCookies.length; i++) {
-                totalCookies += this.hourlyCookies[i];
-            }
-            return totalCookies;
-        }
-        // console.log(this.totalCookies);
+    this.hourlyCookies = [];
+    console.log(typeof (this.minHourlyCustomer), this.maxHourlyCustomer, this.avgCookiesPerCustomer);
+    for (var i = 0; i < 15; i++) {
+        console.log(this.numCustomers());
+        var randCookies = Math.round(this.numCustomers() * this.avgCookiesPerCustomer);
+        this.hourlyCookies.push(randCookies);
     }
+    //create total number of cookies per day
+    this.numCookies = function () {
+        var totalCookies = 0;
+        for (var i = 0; i < this.hourlyCookies.length; i++) {
+            totalCookies += this.hourlyCookies[i];
+        }
+        return totalCookies;
+    };
+};
 }
 //create instances of each store below using constructor function above
-
 var pdx = new Store('PDX Airport', 23, 65, 6.3);
 var pioneer = new Store('Pioneer Square', 3, 24, 1.2);
 var powells = new Store('Powell\'s', 11, 38, 3.7);
@@ -88,7 +85,7 @@ Store.prototype.render = function () {
     lastCell.innerText = this.numCookies();
     row.appendChild(lastCell);
 
-}
+};
 //call render function for each store to display data
 pdx.render();
 pioneer.render();
@@ -111,20 +108,10 @@ function addNewStore(event) {
     var min = parseInt(form.min.value);
     var max = parseInt(form.max.value);
     var avg = parseInt(form.avg.value);
-    // var id = form.id.value;
-    console.log(typeof(min));
-    console.log(max);
-    console.log(avg);
-
 
     var newSt = new Store(name, min, max, avg);
     console.log(newSt);
 
-    // var newStoreEle = document.createElement('tr');
-    // newStoreEle.id = addStore;
-    // newStoreEle.innerText = name;
-    // newStore.appendChild(newStoreEle);
-    // console.log(newStoreEle);
     newSt.render();
 }
 

@@ -12,27 +12,28 @@
     <div id="container">
         <table id="datatable">
         </table>
-
     </div>
     <div id="inputForm">
     <form id= "addStore" action="#">
-        <fieldset>
-            <legend>New Store: </legend>
-            <label for = "name"> Name: </label>
-            <input type = "text" name = "name" required = "required"/>
-
-            <label for = "name"> Minimum Hourly Customers: </label>
-            <input type = "number" name = "min" required = "required"/>
-
-            <label for = "name"> Maximum Hourly Customers: </label>
-            <input type = "text" name = "max" required = "required"/>
-            
-            <label for = "name"> Average Cookies Per Customer: </label>
-            <input type = "text" name = "avg" required = "required"/>
-
-            <!--<label for = "name"> ID: </label>
-            <input type = "text" name = "id" required = "required"/>-->
-            <button type= "submit">Submit</button>
+        <fieldset id="form">
+            <legend id="legend">New Store </legend>
+            <div class= "input1">
+                <label for = "name"> Name: </label>
+                <input type = "text" name = "name" required = "required" id= "input"/>
+            </div>
+            <div class= "input2">
+                <label for = "name"> Minimum Number of Customers per Hour: </label>
+                <input type = "number" name = "min" required = "required" id= "input"/>
+            </div>
+            <div class= "input3">
+                <label for = "name"> Maximum Number of Customers per Hour: </label>
+                <input type = "number" name = "max" required = "required" id= "input"/>
+            </div>
+            <div class= "input4">
+                <label for = "name"> Average Number of Cookies Per Customer: </label>
+                <input type = "number" step = "0.1" name = "avg" required = "required" id= "input"/>
+            </div>
+            <button type= "submit" id="button">Submit</button>
         </fieldset>
     </form>
     </div>

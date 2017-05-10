@@ -30,9 +30,7 @@ p {
 
 #container {
     margin-bottom: 80px;
-}
-#addStore {
-    display: block;
+    margin-top: 80px;
 }
 #datatable {
     font-family: 'Open Sans', sans-serif;
@@ -62,4 +60,42 @@ th {
     background-color: darkslategrey;
     color:white;
 
+}
+#form {
+    border: none;
+    display: block;
+    padding: 10px;
+    width: 700px;
+    margin: auto;
+    border: none;
+}
+#input{
+    display:block;
+    /*margin: 10px;*/
+    /*padding: 10px;*/
+}
+#legend {
+    color: darkslategrey;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    border: none;
+    text-align: center;
+}
+#addStore {
+    display: block;
+    font-size: 16px;
+    font-family:'Open Sans', sans-serif;
+}
+#button{
+    background-color: darkslategray;
+    padding: 4px 10px 4px 10px;
+    font-size: 12px;
+    font-family:'Open Sans', sans-serif;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.input1, .input2, .input3, .input4 {
+    display: inline;
 }

@@ -46,9 +46,9 @@ tr {
 td {
     text-align: center;
     font-family: 'Open Sans', sans-serif;
-    font-size: 12px;
-    width: 100px;
-    height: 30px;
+    font-size: 14px;
+    width: 120px;
+    height: 40px;
     color:darkslategrey;
     word-wrap: break-word;
 }
@@ -57,7 +57,7 @@ th {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     font-style: bold;
-    background-color: darkslategrey;
+    background-color: #7f7f7f;
     color:white;
 
 }
@@ -89,23 +89,27 @@ th {
 }
 #button{
     background-color: #ff5240;
-    padding: 4px 10px 4px 10px;
-    font-size: 12px;
+    /*padding: 4px 10px 4px 10px;*/
+    font-size: 16px;
     font-family:'Open Sans', sans-serif;
     color: white;
     border: none;
     border-radius: 5px;
     margin-top: 30px;
-    text-align: left;
+    text-align: center;
+    width: 100px;
+}
+#button:hover {
+    background-color: #a62315;
 }
 
 .input1, .input2, .input3, .input4 {
     display: block;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
-    font-weight:bold;
     padding: 5px;
     color: darkslategray;
+    color:darkslate
 }
 .input1 input, .input2 input, .input3 input, .input4 input {
     /*background-color:#d2d9dd;*/
@@ -120,7 +124,16 @@ th {
     background-color:lightgrey;
     border-radius: 8px;
     max-width: 450px;
-    /*margin-left: 500px;
-    margin-right: 500px;*/
-    
+    margin: 0 auto;
+}
+
+table thead th:nth-child(n+2){
+    background-color:darkgrey;
+}
+/*table thead th:nth-child(17){
+    background-color:#ff5240;
+}*/
+
+table tr:nth-child(even){
+    background-color: #B0E2E2;
 }

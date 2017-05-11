@@ -1,76 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
 * {
     font-family: 'Raleway', sans-serif;
 }
 
 /* header of page */
-.header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 100px;
-}
+
 .header img {
-    width: 300px;
-    justify-content: flex-start;
-    align-items: left;
-    align-items: center;
+    display: block;
+    width: 400px;
+    margin: 0 auto;
+
 }
 .header h1 {
+    display: block;
+    width: 600px;
+    margin: 0 auto;
     font-family: 'Slabo 27px', serif;
     letter-spacing: 10px;
     font-size: 30px;
-    text-align: left;
     color: black;
-    padding-left: 20px;
-    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+    
 }
 
-.navbar {
+/*.navbar {
     display: flex;
-    /*flex-direction: row;*/
-    justify-content: space-around;
+    flex-direction: row;
     background-color: black;
+    height: 60px;
+    margin: 0;
 }
-.navbar ul li {
+
+.navbar ul li a {
     list-style-type: none;
     color: white;
-    flex-direction: row;
+    padding: 50px;
     font-family: 'Raleway', serif;
     font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+}*/
 
-}
 p {
     font-size: 16px;
     margin: auto;
     padding: 10px;
 }
+hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 
 /* Grid of map locations */
-.location {
+
+/*.location {
     display: flex;
 }
 
 .location h3 {
-    font-szie: 50px;
+    font-size: 30px;
+    font-family: 'Slabo 27px', serif;
 }
 
 .location ul p {
     font-family: inherit;
     font-size: 12px;
     text-indent: 10px;
-}
+}*/
 
 
-p {
-    font-size: 12px;
-    text-align: center;
-}
 
-img {
+
+/*img {
     display: block;
     margin: auto;
     width: 500px;
-}
+}*/
+
 .table {
     font-family: 'Slabo 27px', sans-serif;
     font-size: 20px;
@@ -109,6 +121,7 @@ td {
     color: darkslategrey;
     height: 50px;
 }
+
 h2 {
     text-align: center;
     font-family: 'Slabo 27px', serif;
@@ -121,4 +134,17 @@ th {
     font-size: 16px;
     font-style: bold;
 
+}
+
+#contact {
+    background-color: black;
+    color: white;
+    margin: 0;
+}
+#contact h2 {
+    text-align: center;
+    font-family: 'Slabo 27px', serif;
+    font-size: 24px;
+    color: white;
+    padding-top: 30px;
 }

@@ -57,12 +57,22 @@ function render(cellType, content, row) {
 //render function to create and fill header cells
 function renderHeader() {
     var tableHeader = document.createElement('thead');
+    
+    var hoursOp = document.createElement('tr');
+    tableHeader.appendChild(hoursOp);
+
+    var hoursOpCell = document.createElement('td');
+    hoursOpCell.setAttribute('colspan', 17);
+    hoursOpCell.innerText = 'Hours of Operation';
+    hoursOp.appendChild(hoursOpCell);
 
     for (var i = 0; i < tableHeaderData.length; i++) {
         var header = document.createElement('th');
         header.innerText = tableHeaderData[i];
         tableHeader.appendChild(header);
     }
+    //create header row on top of hours that says 'hours of operation'
+
     table.appendChild(tableHeader);
 }
 

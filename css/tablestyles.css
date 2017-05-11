@@ -125,14 +125,18 @@ th {
     margin: 0 auto;
 }
 
-table thead th:nth-child(n+2){
-    background-color:darkgrey;
-}
 /*table thead th:nth-child(n+18){
     background-color: #7f7f7f;
 }*/
-table thead th:nth-child(n+1){
-    background-color: #7f7f7f;
+/*:nth-child(n+2)*/
+table thead th {
+    background-color:white;
+    color:darkslategray;
+}
+
+table > thead > th:nth-child(n+3):nth-child(-n+17) {
+    background-color: darkgrey;
+    color:white;
 }
 
 table tr:nth-child(even){

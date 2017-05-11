@@ -96,10 +96,11 @@ waterfront.render();
 //call header function to display header information
 renderHeader();
 
-// var form = document.getElementById('a')
+//get access to form in HTML, add event listener to submit data when addNewStore is called
 var newStore = document.getElementById('addStore');
 newStore.addEventListener('submit', addNewStore);
 
+//addNewStore takes user input from form and adds to table
 function addNewStore(event) {
     event.preventDefault();
 

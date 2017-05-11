@@ -40,15 +40,13 @@ p {
     /*table-layout: fixed;
     width: 500px;*/
 }
-tr {
-    background-color: lightgrey;
-}
+
 td {
     text-align: center;
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     width: 120px;
-    height: 40px;
+    height: 45px;
     color:darkslategrey;
     word-wrap: break-word;
 }
@@ -130,10 +128,13 @@ th {
 table thead th:nth-child(n+2){
     background-color:darkgrey;
 }
-/*table thead th:nth-child(17){
-    background-color:#ff5240;
-}*/
+table thead th:nth-child(n+17){
+    background-color: #7f7f7f;
+}
 
 table tr:nth-child(even){
     background-color: #B0E2E2;
+}
+table tr:nth-child(odd){
+    background-color: lightgrey;
 }

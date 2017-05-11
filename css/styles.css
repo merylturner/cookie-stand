@@ -4,34 +4,46 @@
 
 /* header of page */
 .header {
-    /*display: flex;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     height: 100px;
 }
 .header img {
-    width: 600px;
-    /*justify-content: flex-start;*/
+    width: 300px;
+    justify-content: flex-start;
+    align-items: left;
     align-items: center;
 }
 .header h1 {
     font-family: 'Slabo 27px', serif;
     letter-spacing: 10px;
-    font-size: 50px;
-    text-align: center;
-    width: 400px;
-    height: 200px;
-    /*background-color: black;*/
+    font-size: 30px;
+    text-align: left;
     color: black;
+    padding-left: 20px;
     align-items: center;
 }
 
+.navbar {
+    display: flex;
+    /*flex-direction: row;*/
+    justify-content: space-around;
+    background-color: black;
+}
 .navbar ul li {
     list-style-type: none;
-    display: flex;
+    color: white;
     flex-direction: row;
-    justify-content: space-around;
+    font-family: 'Raleway', serif;
+    font-size: 16px;
 
 }
-
+p {
+    font-size: 16px;
+    margin: auto;
+    padding: 10px;
+}
 
 /* Grid of map locations */
 .location {
@@ -60,7 +72,7 @@ img {
     width: 500px;
 }
 .table {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Slabo 27px', sans-serif;
     font-size: 20px;
     /*display: block;*/
     overflow: auto;

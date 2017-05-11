@@ -96,6 +96,10 @@ Store.prototype.render = function () {
     row.appendChild(lastCell);
 
 };
+
+//call header function to display header information
+renderHeader();
+
 //call render function for each store to display data
 pdx.render();
 pioneer.render();
@@ -103,8 +107,6 @@ powells.render();
 stJohns.render();
 waterfront.render();
 
-//call header function to display header information
-renderHeader();
 
 //get access to form in HTML, add event listener to submit data when addNewStore is called
 var newStore = document.getElementById('addStore');

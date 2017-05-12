@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 * {
@@ -66,7 +66,7 @@ h2 {
     font-family: 'Slabo 27px', serif;
     font-size: 24px;
     color: black;
-    margin-top: 50px;
+    margin-top: 10px;
     margin-left: 20px;
 }
 
@@ -89,7 +89,7 @@ h2 {
     flex-grow: 1;
     margin-left: 20px;
     flex-shrink: 1;
-    border-radius: 5px;
+    border-radius: 2px;
 }
 
 .about p {
@@ -111,7 +111,7 @@ h2 {
     flex-grow: 1;
     margin-right: 20px;
     flex-shrink: 1;
-    border-radius: 5px;
+    border-radius: 2px;
 }
 
 .theCookies p {
@@ -143,6 +143,7 @@ hr {
 .location img {
     margin: 10px;
     padding: 30px;
+    border-radius: 2px;
 }
 
 .data {
@@ -157,74 +158,28 @@ hr {
     text-align: center;
 
 }
-/*.data ul li:last-child {
-    list-style: none;
-    display: inline;
-    font-size: 16px;
-    font-family: 'Raleway', sans-serif;
-}*/
-
-
-
-
-
-/*img {
-    display: block;
-    margin: auto;
-    width: 500px;
-}*/
-
-/*.table {
-    font-family: 'Slabo 27px', sans-serif;
-    font-size: 20px;
-    /*display: block;*/
-    /*overflow: auto;
-    text-align: center;
-    word-wrap: break-word;*/
-
-
-/*td {
-    width: 200px;
-    margin: 50px;
-}
-#img {
-    background-color: white;
-    width: 200px;
-    height: 200px;
-}
-#data1 {
-    text-align: center;
-    font-family: 'Slabo 27px', serif;
-    font-size: 24px;
-    height: 60px;
-    color:black;
-    word-wrap: break-word;
-    background-color: #ff5240;
-    color: white;
-}
-#data2 {
-    font-size: 16px;
-    color: darkslategrey;
-    height: 50px;
-}
-#data3 {
-    font-size: 12px;
-    color: darkslategrey;
-    height: 50px;
+/*      MAKE LOCATION NAME BOLD ???     */
+.data ul li:first-child {
+    font-weight: bold;
 }
 
-th {
-    word-wrap: break-word;
-    font-family: 'Slabo 27px', serif;
-    font-size: 16px;
-    font-style: bold;
 
-}*/
+
+
+
+
 
 /*     STORE SECTION     */
 #store img {
     display: inline-block;
+    padding: 20px;
+    max-width: 300px;
+    margin: 0 auto;
+}
 
+#store h6 {
+    display: inline;
+    margin: 100px;
 }
 
 
@@ -234,12 +189,21 @@ th {
 #footer {
     background-color: black;
     color: white;
-    margin: 0;
+    margin: 0 auto;
+}
+#footer p {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    margin-left: 20px;
 }
 #footer h2 {
-    text-align: center;
+    text-align: left;
     font-family: 'Slabo 27px', serif;
     font-size: 24px;
     color: white;
     padding-top: 30px;
+}
+#footer form {
+    margin-left: 20px;
 }

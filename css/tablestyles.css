@@ -1,12 +1,12 @@
 h1, h3 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Slabo 27px', sans-serif;
     font-size: 50px;
     text-align: center;
     color: #ff5240;
 }
 
 * {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Slabo 27px', serif;
 }
 
 .location h3 {
@@ -33,7 +33,7 @@ p {
     margin-top: 80px;
 }
 #datatable {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Slabo 27px', serif;
     font-size: 20px;
     display: block;
     overflow: auto;
@@ -43,7 +43,7 @@ p {
 
 td {
     text-align: center;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 14px;
     width: 120px;
     height: 45px;
@@ -52,13 +52,14 @@ td {
 }
 th {
     word-wrap: break-word;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Slabo 27px', serif;
     font-size: 16px;
     font-style: bold;
     background-color: #7f7f7f;
     color:white;
 
 }
+/*          FORM         */
 
 #form {
     border: none;
@@ -72,12 +73,12 @@ th {
 #addStore {
     display: block;
     font-size: 16px;
-    font-family:'Open Sans', sans-serif;
+    font-family:'Raleway', sans-serif;
 }
 #legend {
     color: darkslategrey;
     width: 500px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Slabo 27px', serif;
     font-size: 24px;
     border: none;
     text-align: left;
@@ -89,7 +90,7 @@ th {
     background-color: #ff5240;
     /*padding: 4px 10px 4px 10px;*/
     font-size: 16px;
-    font-family:'Open Sans', sans-serif;
+    font-family: 'Slabo 27px', serif;
     color: white;
     border: none;
     border-radius: 5px;
@@ -103,7 +104,7 @@ th {
 
 .input1, .input2, .input3, .input4 {
     display: block;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 16px;
     padding: 5px;
     color: darkslategray;
@@ -125,10 +126,6 @@ th {
     margin: 0 auto;
 }
 
-/*table thead th:nth-child(n+18){
-    background-color: #7f7f7f;
-}*/
-/*:nth-child(n+2)*/
 table thead th {
     background-color:white;
     color:darkslategray;
@@ -148,6 +145,7 @@ table tr:nth-child(even){
 
 table thead td {
     background-color: white;
+    font-family: 'Slabo 27px', serif;
     color: darkslategray;
     font-size: 16px;
     font-weight: bold;

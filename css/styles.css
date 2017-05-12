@@ -1,27 +1,209 @@
-h1 {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 50px;
-    text-align: center;
-    color: #ff5240;
+body {
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
 }
 
 * {
-    font-family: Arial, sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
-.location h3 {
-    font-szie: 50px;
+/*     HEADER     */
+
+.header img {
+    display: block;
+    width: 400px;
+    margin: 0 auto;
+
 }
-.location ul p {
-    font-family: inherit;
-    font-size: 12px;
-    text-indent: 10px;
+.header h1 {
+    display: block;
+    font-family: 'Slabo 27px', serif;
+    letter-spacing: 10px;
+    font-size: 30px;
+    color: black;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
 }
-.location {
+
+/*     NAVIGATION BAR     */
+
+.navbar {
+    background-color: black;
+    color: white;
+    list-style: none;
+    margin: 0px;
+    text-align: center;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+
+}
+.navbar ul {
+    padding-left: 0px;
+}
+.navbar li {
+    display: inline;
+    
+}
+
+.navbar a {
     display: inline-block;
+    padding: 20px 50px;
+    text-decoration: none;
+    color: white;
+    font-family: 'Slabo 27px', sans-serif; 
 }
-p {
-    font-size: 12px;
+
+
+/*     ABOUT US SECTION     */
+h2 {
+    text-align: left;
+    font-family: 'Slabo 27px', serif;
+    font-size: 24px;
+    color: black;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.about, .theCookies {
+    display: flex;
+    flex-direction: row;
+}
+
+.theCookies h2 {
+    margin-top: 0px;
+    padding: 0px;
+}
+
+
+.about img {
+    display: inline-block;
+    width: 400px;
+    height: 250px;
+    order: 1;
+    flex-grow: 1;
+    margin-left: 20px;
+    flex-shrink: 1;
+    border-radius: 2px;
+}
+
+.about p {
+    flex-grow: 2;
+    font-size: 16px;
+    margin: 10px;
+    margin-right: 20px;
+    padding: 10px;
+    display: inline-block;
+    order: 2;
+    /*width: 300px;*/
+}
+
+.theCookies img {
+    display: inline-block;
+    width: 400px;
+    height: 250px;
+    order: 2;
+    flex-grow: 1;
+    margin-right: 20px;
+    flex-shrink: 1;
+    border-radius: 2px;
+}
+
+.theCookies p {
+    flex-grow: 2;
+    font-size: 16px;
+    margin: 10px;
+    margin-right: 20px;
+    padding: 10px;
+    display: inline-block;
+    order: 1;
+    /*width: 300px;*/
+}
+
+hr {
+    margin: 10px 10px;
+}
+
+
+
+
+
+/*     LOCATIONS     */
+
+
+
+.location h2 {
+    display: block;
+}
+.location img {
+    margin: 10px;
+    padding: 30px;
+    border-radius: 2px;
+}
+
+.data {
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    font-family: 'Slabo 27px', serif;
+    justify-content: space-around;
+}
+.data ul {
+    list-style-type: none;
     text-align: center;
 
+}
+/*      MAKE LOCATION NAME BOLD ???     */
+.data ul li:first-child {
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+/*     STORE SECTION     */
+#store img {
+    display: inline-block;
+    padding: 20px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+#store h6 {
+    display: inline;
+    margin: 100px;
+}
+
+
+
+
+/*     FOOTER - CONTACT SECTION     */
+#footer {
+    background-color: black;
+    color: white;
+    margin: 0 auto;
+}
+#footer p {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    margin-left: 20px;
+}
+#footer h2 {
+    text-align: left;
+    font-family: 'Slabo 27px', serif;
+    font-size: 24px;
+    color: white;
+    padding-top: 30px;
+}
+#footer form {
+    margin-left: 20px;
 }

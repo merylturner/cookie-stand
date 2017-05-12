@@ -3,43 +3,142 @@
 
 <head>
     <title>Pat's Salmon Cookies</title>
+    <link type="text/css" href="css/skeleton.css" rel="stylesheet" />
     <link type="text/css" href="css/styles.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Slabo+27px|Open+Sans" rel="stylesheet">
 </head>
 
 <body>
-    <div="header">
-        <h1>Pat's Salmon Cookies</h1>
+    <div class="header">
         <img src="https://github.com/codefellowspdx/201d-spring-2017/raw/master/class-06-dom-objects-domain_modeling/lab/assets/salmon.png"
         />
+        <h1>Pat's Salmon Cookies</h1>
+    </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#about"> ABOUT</a> </li>
+            <li><a href="#locations"> LOCATIONS</a> </li>
+            <li><a href="#store"> STORE</a> </li>
+            <li><a href="#contact"> CONTACT</a> </li>
+        </ul>
+    </nav>
+
+    <br/>
+    <br/>
+
+    <div class="body">
         <h2> About </h2>
-        <p> Pat's Salmon Cookies started in Seattle, and combined two signature Seattle icons: salmon and coffee. We have now
-            expand to Portland.</p>
+        <div class="about">
+            <img src="imgs/family.jpg" />
+            <p> Venmo portland tumblr semiotics. Austin stumptown tote bag, blog bespoke drinking vinegar normcore VHS humblebrag
+                sartorial before they sold out paleo. Kickstarter synth tilde kinfolk mumblecore helvetica. Listicle marfa
+                etsy cornhole. Selfies YOLO yuccie chartreuse chillwave. Asymmetrical vinyl vape, meditation paleo pinterest
+                chia etsy twee thundercats lo-fi. Microdosing cray flexitarian everyday carry.
+                <lb/> Jean shorts lo-fi retro, letterpress portland artisan meditation squid listicle man bun. Microdosing beard
+                PBR&B tumeric, sriracha yuccie iceland flexitarian DIY wolf chambray 8-bit poutine selvage schlitz. Marfa
+                jianbing mustache post-ironic microdosing, small batch occupy bespoke kale chips hoodie. Trust fund pug next
+                level hot chicken normcore. La croix flannel synth meh vice, 8-bit marfa cornhole. Meh tacos kombucha, bitters
+                fap leggings gastropub paleo ethical 3 wolf moon chillwave succulents man braid. Mustache crucifix brooklyn
+                tilde vape green juice venmo migas, mumblecore coloring book.
+            </p>
         </div>
-        <div class="location">
-            <h3>Locations
-                <h3>
-                    <ul>
-                        <!-- add geotag google map image or address -->
-                        <li>Portland Airport</li>
-                        <p> Hours: 6 AM - 8 PM </p>
-                        <p> Phone: (503) 555 - 5555 </p>
-                        <li>Pioneer Square</li>
-                        <p> Hours: 6 AM - 8 PM </p>
-                        <p> Phone: (503) 444 - 4444 </p>
-                        <li>Powell's</li>
-                        <p> Hours: 6 AM - 8 PM </p>
-                        <p> Phone: (503) 555 - 5555 </p>
-                        <li>St. John's</li>
-                        <p> Hours: 6 AM - 8 PM </p>
-                        <p> Phone: (503) 555 - 5555 </p>
-                        <li>Waterfront</li>
-                        <p> Hours: 6 AM - 8 PM </p>
-                        <p> Phone: (503) 555 - 5555 </p>
-                    </ul>
+
+        <br/>
+        <hr/>
+        <br/>
+
+        <h2> The Cookie </h2>
+        <div class="theCookies">
+            <p> Dreamcatcher iPhone mixtape PBR&B, raclette lumbersexual whatever pop-up raw denim vice chillwave blue bottle.
+                Humblebrag vexillologist chartreuse messenger bag celiac, +1 kogi gochujang vegan keytar. Snackwave VHS DIY
+                chambray trust fund. +1 gluten-free yr plaid, semiotics crucifix glossier 8-bit live-edge taxidermy celiac
+                subway tile. Retro tumeric ethical twee, aesthetic art party meditation bicycle rights scenester kickstarter
+                occupy cardigan. Mustache synth crucifix, paleo live-edge subway tile street art swag gochujang bespoke man
+                braid. Bushwick tote bag photo booth, chicharrones keytar edison bulb 8-bit chartreuse.
+            </p>
+            <img src="imgs/frosted-cookie.jpg" />
         </div>
-                <!-- add social media buttons -->
-                <p> Find us on social Media! </p>
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="location" id="locations">
+        <h2>Locations</h2>
+        <!--<td> <iframe width = "200" height = "200" src ="linkURL;output=embed" ></iframe></td>-->
+        <!--<iframe width = "200" height = "200" src = "https://www.google.com/maps/place/Portland+International+Airport+(PDX)/@45.584003,-122.5848803,15z/data=!4m12!1m6!3m5!1s0x0:0x5bda7693380e5c3d!2sPortland+International+Airport+(PDX)!8m2!3d45.5897694!4d-122.5950942!3m4!1s0x0:0x5bda7693380e5c3d!8m2!3d45.5897694!4d-122.5950942; output = embed" seamless = "seamless"> </iframe>-->
+        <img src="imgs/pdx airport location.png" id="img" git/>
+        <img src="imgs/pdx airport location.png" id="img" git/>
+        <img src="imgs/pdx airport location.png" id="img" git/>
+        <img src="imgs/pdx airport location.png" id="img" git/>
+        <img src="imgs/pdx airport location.png" id="img" git/>
+
+        <div class="data">
+            <ul>
+                <li>Portland Airport</li>
+                <li> Hours: 6 AM - 8 PM </li>
+            </ul>
+            <ul>
+                <li>Pioneer Square</li>
+                <li> Hours: 6 AM - 8 PM </li>
+            </ul>
+            <ul>
+                <li>Powell's</li>
+                <li> Hours: 6 AM - 8 PM </li>
+            </ul>
+            <ul>
+                <li>Waterfront</li>
+                <li> Hours: 6 AM - 8 PM </li>
+            </ul>
+            <ul>
+                <li>St. John's</li>
+                <li> Hours: 6 AM - 8 PM </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <div class="store" id="store">
+        <h2> Store </h2>
+        <!-- tshirt image and cookie cutter here, with buttons, (form of size, and QTY)-->
+        <img src="imgs/shirt.jpg" />
+        <!-- Men's T shirt for sale, $$, Size S - XXL, ADD FORM?? or BUTTON? -->
+        <img src="imgs/cutter.jpeg" />
+        <!-- Salmon shaped cookie cutter, $$, one size only.. form?? -->
+        <img src="imgs/fish.jpg" />
+        <!-- Fish Stickers! Pack of 4, $$, submit form -->
+        <img src="imgs/chinook.jpg" />
+        <h6> Men's Salmon TShirt </h6>
+        <h6> Salmon Shaped Cookie Cutter </h6>
+        <h6> Salmon Stickers </h6>
+        <h6> Salmon Tin Tacker </h6>
+    </div>
+    </div>
+
+    <br/>
+
+    <br/>
+
+    <div id="footer">
+        <h2> Contact </h2>
+        <p> Find us on social Media! </p>
+        <!-- add social media buttons -->
+        <!--<img src=" " />-->
+        <p> Phone: (503) 555 - 5555 </p>
+        <p> Subscribe to our mailing list! </p>
+        <form action="#">
+            <input type="text" name="email" placeholder="Enter your email" />
+            <button> Subscribe </button>
+            <!--<input type = "image" src = " " width = "100" height = "20"/>-->
+        </form>
+
+    </div>
+
 </body>
 
 </html>

@@ -62,30 +62,37 @@ body {
 
 /*     ABOUT US SECTION     */
 h2 {
-    text-align: center;
+    text-align: left;
     font-family: 'Slabo 27px', serif;
     font-size: 24px;
     color: black;
     margin-top: 50px;
+    margin-left: 20px;
 }
 
-.about, .theCookie {
+.about, .theCookies {
     display: flex;
     flex-direction: row;
 }
 
+.theCookies h2 {
+    margin-top: 0px;
+    padding: 0px;
+}
 
-.about img, .theCookie img {
+
+.about img {
     display: inline-block;
-    width: 200px;
-    height: 300px;
+    width: 400px;
+    height: 250px;
     order: 1;
     flex-grow: 1;
     margin-left: 20px;
     flex-shrink: 1;
+    border-radius: 5px;
 }
 
-p {
+.about p {
     flex-grow: 2;
     font-size: 16px;
     margin: 10px;
@@ -93,36 +100,70 @@ p {
     padding: 10px;
     display: inline-block;
     order: 2;
-    width: 300px;
-
+    /*width: 300px;*/
 }
+
+.theCookies img {
+    display: inline-block;
+    width: 400px;
+    height: 250px;
+    order: 2;
+    flex-grow: 1;
+    margin-right: 20px;
+    flex-shrink: 1;
+    border-radius: 5px;
+}
+
+.theCookies p {
+    flex-grow: 2;
+    font-size: 16px;
+    margin: 10px;
+    margin-right: 20px;
+    padding: 10px;
+    display: inline-block;
+    order: 1;
+    /*width: 300px;*/
+}
+
 hr {
     margin: 10px 10px;
 }
 
 
-/*.body {
-    display:inline-block;
-}*/
+
 
 
 /*     LOCATIONS     */
 
 
-/*.location {
+
+.location h2 {
+    display: block;
+}
+.location img {
+    margin: 10px;
+    padding: 30px;
+}
+
+.data {
     display: flex;
-}
-
-.location h3 {
-    font-size: 30px;
+    flex-direction: row;
+    font-size: 16px;
     font-family: 'Slabo 27px', serif;
+    justify-content: space-around;
 }
+.data ul {
+    list-style-type: none;
+    text-align: center;
 
-.location ul p {
-    font-family: inherit;
-    font-size: 12px;
-    text-indent: 10px;
+}
+/*.data ul li:last-child {
+    list-style: none;
+    display: inline;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
 }*/
+
 
 
 
@@ -133,16 +174,16 @@ hr {
     width: 500px;
 }*/
 
-.table {
+/*.table {
     font-family: 'Slabo 27px', sans-serif;
     font-size: 20px;
     /*display: block;*/
-    overflow: auto;
+    /*overflow: auto;
     text-align: center;
-    word-wrap: break-word;
-}
+    word-wrap: break-word;*/
 
-td {
+
+/*td {
     width: 200px;
     margin: 50px;
 }
@@ -178,7 +219,7 @@ th {
     font-size: 16px;
     font-style: bold;
 
-}
+}*/
 
 /*     STORE SECTION     */
 #store img {

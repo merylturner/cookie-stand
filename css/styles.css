@@ -1,7 +1,10 @@
 body {
     margin: 0;
-    padding: 0;
-    margin-top: 10px;
+    height: 100%;
+    width: 100%;
+
+    /*padding: 0;
+    margin-top: 10px;*/
 }
 
 * {
@@ -14,6 +17,7 @@ body {
     display: block;
     width: 400px;
     margin: 0 auto;
+    margin-top: 20px;
 
 }
 .header h1 {
@@ -191,12 +195,19 @@ hr {
     color: white;
     margin: 0 auto;
 }
-#footer p {
+#footer p, {
     color: white;
     font-family: 'Raleway', sans-serif;
     font-size: 12px;
-    margin-left: 20px;
+    margin: 20px;
+    padding: 20px;
 }
+
+#footer a {
+    text-decoration: none;
+    color:white;
+}
+
 #footer h2 {
     text-align: left;
     font-family: 'Slabo 27px', serif;

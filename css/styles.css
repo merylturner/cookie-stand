@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    margin-top: 20px;
 }
 
 * {
@@ -23,6 +24,7 @@ body {
     color: black;
     text-align: center;
     margin-top: 30px;
+    margin-bottom: 30px;
     
 }
 
@@ -32,10 +34,17 @@ body {
     background-color: black;
     color: white;
     list-style: none;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
     text-align: center;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
 
+}
+.navbar ul {
+    padding-left: 0px;
 }
 .navbar li {
     display: inline;
@@ -50,34 +59,52 @@ body {
     font-family: 'Slabo 27px', sans-serif; 
 }
 
+
 /*     ABOUT US SECTION     */
 h2 {
     text-align: center;
     font-family: 'Slabo 27px', serif;
     font-size: 24px;
     color: black;
-    margin-top: 100px;
+    margin-top: 50px;
 }
+
+.about, .theCookie {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.about img, .theCookie img {
+    display: inline-block;
+    width: 200px;
+    height: 300px;
+    order: 1;
+    flex-grow: 1;
+    margin-left: 20px;
+    flex-shrink: 1;
+}
+
 p {
+    flex-grow: 2;
     font-size: 16px;
     margin: 10px;
+    margin-right: 20px;
     padding: 10px;
+    display: inline-block;
+    order: 2;
+    width: 300px;
+
 }
 hr {
-    /*margin-top: 10px;
-    margin-bottom: 10px;*/
-    margin: 20px 10px;
+    margin: 10px 10px;
 }
+
 
 /*.body {
     display:inline-block;
 }*/
 
-.body img {
-    display: block;
-    width: 500px;
-    margin: 0 auto;
-}
 
 /*     LOCATIONS     */
 

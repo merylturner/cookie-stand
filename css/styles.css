@@ -2,9 +2,6 @@ body {
     margin: 0;
     height: 100%;
     width: 100%;
-
-    /*padding: 0;
-    margin-top: 10px;*/
 }
 
 * {
@@ -22,7 +19,8 @@ body {
 }
 .header h1 {
     display: block;
-    font-family: 'Slabo 27px', serif;
+    /*font-family: 'Abril Fatface', cursive;*/
+    font-family: 'BioRhyme', serif;
     letter-spacing: 10px;
     font-size: 30px;
     color: black;
@@ -60,14 +58,16 @@ body {
     padding: 20px 50px;
     text-decoration: none;
     color: white;
-    font-family: 'Slabo 27px', sans-serif; 
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px; 
+    letter-spacing: 2px;
 }
 
 
 /*     ABOUT US SECTION     */
 h2 {
     text-align: left;
-    font-family: 'Slabo 27px', serif;
+    font-family: 'BioRhyme', serif;
     font-size: 24px;
     color: black;
     margin-top: 10px;
@@ -153,68 +153,95 @@ hr {
 .data {
     display: flex;
     flex-direction: row;
-    font-size: 16px;
-    font-family: 'Slabo 27px', serif;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 .data ul {
     list-style-type: none;
     text-align: center;
+    font-size: 14px;
+
 
 }
 /*      MAKE LOCATION NAME BOLD ???     */
-.data ul li:first-child {
-    font-weight: bold;
+.locationName {
+    font-size: 18px;
+    font-family: 'BioRhyme', serif;
+    
 }
-
-
-
 
 
 
 
 /*     STORE SECTION     */
-#store img {
+
+.store img {
     display: inline-block;
     padding: 20px;
     max-width: 300px;
     margin: 0 auto;
 }
-
-#store h6 {
+.store h6 {
     display: inline;
+    left: 0%;
+    position: relative;
+    text-align: center;
     margin: 100px;
+    font-size: 14px;
+    font-family: 'BioRhyme', serif;
 }
-
 
 
 
 /*     FOOTER - CONTACT SECTION     */
-#footer {
+.footer {
     background-color: black;
     color: white;
     margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px 10px;
 }
-#footer p, {
+p.contact {
     color: white;
     font-family: 'Raleway', sans-serif;
     font-size: 12px;
     margin: 20px;
     padding: 20px;
+    order: 2;
 }
 
-#footer a {
+.footer a {
     text-decoration: none;
     color:white;
 }
 
-#footer h2 {
+.footer h2 {
     text-align: left;
-    font-family: 'Slabo 27px', serif;
+    font-family: 'BioRhyme', serif;
     font-size: 24px;
     color: white;
-    padding-top: 30px;
+    order: 1;
+    align-content: flex-start;
+
 }
-#footer form {
+.footer form {
     margin-left: 20px;
+    align-content: flex-end;
+    order:4;
+}
+
+#copyright {
+    order: 5;
+}
+
+.footer button {
+    order: 3
+}
+.footer p {
+    display: block;
+    text-align: center;
 }

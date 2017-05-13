@@ -135,16 +135,21 @@ hr {
 
 
 
-
-
-/*     LOCATIONS     */
-
-
-
+/*                LOCATIONS SECTION     */
+.maps {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+iframe {
+    /*padding: 10px;*/
+}
+/*
 .location h2 {
     display: block;
-}
-.location img {
+}*/
+/*.location img {
     margin: 10px;
     padding: 30px;
     border-radius: 2px;
@@ -163,14 +168,12 @@ hr {
     text-align: center;
     font-size: 14px;
 
-
-}
-/*      MAKE LOCATION NAME BOLD ???     */
-.locationName {
+}*/
+/*.locationName {
     font-size: 18px;
     font-family: 'BioRhyme', serif;
     
-}
+}*/
 
 
 

@@ -87,7 +87,6 @@ h2 {
 
 .about img {
     display: inline-block;
-    width: 400px;
     height: 250px;
     order: 1;
     flex-grow: 1;
@@ -104,12 +103,10 @@ h2 {
     padding: 10px;
     display: inline-block;
     order: 2;
-    /*width: 300px;*/
 }
 
 .theCookies img {
     display: inline-block;
-    width: 400px;
     height: 250px;
     order: 2;
     flex-grow: 1;

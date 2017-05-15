@@ -34,24 +34,7 @@ function Store(name, minHourlyCustomer, maxHourlyCustomer, avgCookiesPerCustomer
         };
     };
 }
-        //create total cookies for specific hour
-        // this.totalHoursCookies = function () {
-        //     var hoursCookies = 0;
-        //     console.log(hoursCookies);
-        //     for (var i = 0; i < this.totalCookiesOfHour.length; i++) {
-        //         hoursCookies += this.totalCookiesOfHour[i];
-        //     }
-        //     return hoursCookies;
-        // };
 
-        // function totalHoursCookies() {
-            
-        //     var hoursCookies = 0;
-        //     for (var i = 0; i < this.totalCookiesOfHour.length; i++) {
-        //         hoursCookies += this.totalCookiesOfHour[i];
-        //     }
-        //     return hoursCookies;
-        // };
 //create instances of each store below using constructor function above
 var pdx = new Store('PDX Airport', 23, 65, 6.3);
 var pioneer = new Store('Pioneer Square', 3, 24, 1.2);
@@ -117,16 +100,6 @@ Store.prototype.render = function () {
 
 };
 
-//create footer for sum of all stores' cookies at hour x 
-// function renderFooter() {
-
-//     var tableFooter = document.createElement('tfoot');
-//     var footerRow = document.createElement('tr');
-//     var footerCell = document.createElement('td');
-//     footerCell.innerText = totalHoursCookies();
-//     footerRow.appendChild(footerCell);
-//     table.appendChild(footerRow);
-// }
 //call header function to display header information
 renderHeader();
 
@@ -137,8 +110,6 @@ powells.render();
 stJohns.render();
 waterfront.render();
 
-//call footer function to display footer information
-// renderFooter();
 
 //get access to form in HTML, add event listener to submit data when addNewStore is called
 var newStore = document.getElementById('addStore');

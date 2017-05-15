@@ -20,7 +20,7 @@ body {
 .header h1 {
     display: block;
     /*font-family: 'Abril Fatface', cursive;*/
-    font-family: 'BioRhyme', serif;
+    font-family: 'Biorhyme', serif;
     letter-spacing: 10px;
     font-size: 30px;
     color: black;
@@ -88,12 +88,11 @@ p {
     margin-top: 80px;
 }
 #datatable {
-    font-family: 'Slabo 27px', serif;
+    font-family: 'Raleway', serif;
     font-size: 20px;
     display: block;
     overflow: auto;
-    /*table-layout: fixed;
-    width: 500px;*/
+    font-weight: bold;
 }
 
 td {
@@ -107,9 +106,9 @@ td {
 }
 th {
     word-wrap: break-word;
-    font-family: 'Slabo 27px', serif;
+    font-family: 'Raleway', serif;
     font-size: 16px;
-    font-style: bold;
+    font-weight: bold;
     background-color: #7f7f7f;
     color:white;
 
@@ -133,7 +132,7 @@ th {
 #legend {
     color: darkslategrey;
     width: 500px;
-    font-family: 'Slabo 27px', serif;
+    font-family: 'Raleway', serif;
     font-size: 24px;
     border: none;
     text-align: left;
@@ -145,7 +144,7 @@ th {
     background-color: black;
     /*padding: 4px 10px 4px 10px;*/
     font-size: 16px;
-    font-family: 'Slabo 27px', serif;
+    font-family: 'Raleway', serif;
     color: white;
     border: none;
     border-radius: 5px;
@@ -200,7 +199,7 @@ table tr:nth-child(even){
 
 table thead td {
     background-color: white;
-    font-family: 'Slabo 27px', serif;
+    font-family: 'Raleway', serif;
     color: darkslategray;
     font-size: 16px;
     font-weight: bold;

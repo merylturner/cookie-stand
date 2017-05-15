@@ -82,6 +82,7 @@ h2 {
 .theCookies h2 {
     margin-top: 0px;
     padding: 0px;
+    align-items: center;
 }
 
 
@@ -103,10 +104,6 @@ h2 {
     padding: 10px;
     display: inline-block;
     order: 2;
-}
-#chinook {
-    order: 3;
-    height: 100px;
 }
 
 .theCookies img {
@@ -133,7 +130,9 @@ hr {
     margin: 10px 10px;
 }
 
-
+#chinook {
+    height: 150px;
+}
 
 
 /*                LOCATIONS SECTION     */
